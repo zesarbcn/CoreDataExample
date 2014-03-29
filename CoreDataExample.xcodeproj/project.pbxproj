@@ -25,6 +25,8 @@
 		491478AE18E3996C0083871D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4914788918E3996C0083871D /* CoreData.framework */; };
 		491478B618E3996C0083871D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 491478B418E3996C0083871D /* InfoPlist.strings */; };
 		491478B818E3996C0083871D /* CoreDataExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 491478B718E3996C0083871D /* CoreDataExampleTests.m */; };
+		4953FE0D18E6343400792F85 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 4953FE0C18E6343400792F85 /* Contact.m */; };
+		4953FE1018E635A100792F85 /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4953FE0F18E635A100792F85 /* CoreDataTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,10 @@
 		491478B318E3996C0083871D /* CoreDataExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CoreDataExampleTests-Info.plist"; sourceTree = "<group>"; };
 		491478B518E3996C0083871D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		491478B718E3996C0083871D /* CoreDataExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataExampleTests.m; sourceTree = "<group>"; };
+		4953FE0B18E6343400792F85 /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
+		4953FE0C18E6343400792F85 /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
+		4953FE0E18E635A100792F85 /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTableViewController.h; sourceTree = "<group>"; };
+		4953FE0F18E635A100792F85 /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,15 +129,12 @@
 		4914788B18E3996C0083871D /* CoreDataExample */ = {
 			isa = PBXGroup;
 			children = (
+				4953FE0A18E60C2D00792F85 /* Controller */,
+				4953FE0918E60C1C00792F85 /* View */,
+				4953FE0818E60C1300792F85 /* Model */,
 				4914789418E3996C0083871D /* AppDelegate.h */,
 				4914789518E3996C0083871D /* AppDelegate.m */,
-				4914789718E3996C0083871D /* Main.storyboard */,
-				4914789D18E3996C0083871D /* MasterViewController.h */,
-				4914789E18E3996C0083871D /* MasterViewController.m */,
-				491478A018E3996C0083871D /* DetailViewController.h */,
-				491478A118E3996C0083871D /* DetailViewController.m */,
 				491478A318E3996C0083871D /* Images.xcassets */,
-				4914789A18E3996C0083871D /* CoreDataExample.xcdatamodeld */,
 				4914788C18E3996C0083871D /* Supporting Files */,
 			);
 			path = CoreDataExample;
@@ -164,6 +167,37 @@
 				491478B418E3996C0083871D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4953FE0818E60C1300792F85 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4914789A18E3996C0083871D /* CoreDataExample.xcdatamodeld */,
+				4953FE0B18E6343400792F85 /* Contact.h */,
+				4953FE0C18E6343400792F85 /* Contact.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		4953FE0918E60C1C00792F85 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4914789718E3996C0083871D /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		4953FE0A18E60C2D00792F85 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4953FE0E18E635A100792F85 /* CoreDataTableViewController.h */,
+				4953FE0F18E635A100792F85 /* CoreDataTableViewController.m */,
+				4914789D18E3996C0083871D /* MasterViewController.h */,
+				4914789E18E3996C0083871D /* MasterViewController.m */,
+				491478A018E3996C0083871D /* DetailViewController.h */,
+				491478A118E3996C0083871D /* DetailViewController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,8 +299,10 @@
 			files = (
 				491478A218E3996C0083871D /* DetailViewController.m in Sources */,
 				4914789F18E3996C0083871D /* MasterViewController.m in Sources */,
+				4953FE1018E635A100792F85 /* CoreDataTableViewController.m in Sources */,
 				4914789618E3996C0083871D /* AppDelegate.m in Sources */,
 				4914789218E3996C0083871D /* main.m in Sources */,
+				4953FE0D18E6343400792F85 /* Contact.m in Sources */,
 				4914789C18E3996C0083871D /* CoreDataExample.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,6 +512,7 @@
 				491478BD18E3996C0083871D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		491478BE18E3996C0083871D /* Build configuration list for PBXNativeTarget "CoreDataExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -484,6 +521,7 @@
 				491478C018E3996C0083871D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

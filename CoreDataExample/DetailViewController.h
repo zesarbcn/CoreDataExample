@@ -11,6 +11,16 @@
 @interface DetailViewController : UIViewController
 
 @property (strong, nonatomic) id detailItem;
+@property (nonatomic) Boolean detailItemEdition;
 
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@property (weak, nonatomic) IBOutlet UITextField *nameField;
+@property (weak, nonatomic) IBOutlet UITextField *addressField;
+@property (weak, nonatomic) IBOutlet UITextField *phoneField;
+
+
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+
+- (IBAction)cancel:(id)sender;
+- (IBAction)save:(id)sender;
+
 @end
